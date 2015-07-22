@@ -58,7 +58,6 @@
 			System.out.println("树的镜像:");	
 			tree.preOrderByNonRecursive(tree.getMirrorRec(tree.getRootNode()));
 			
-			
 		}
 	
 		// 根结点
@@ -94,7 +93,7 @@
 			
 			//边界判断
 			if (rootNode == null)
-				return null;
+				throw new RuntimeException("请传入不为null的树!");
 			
 			//获取当前结点
 			BinaryNode copyNode = new BinaryNode(null, rootNode.getValue(), null);
@@ -125,7 +124,7 @@
 							.getRightNode() == null ? true : false));
 	
 			if (flag)
-				return;
+				return ;
 	
 			// 交换左右子树结点
 			BinaryNode tempNode = rootNode.getLeftNode();
@@ -151,6 +150,7 @@
 	
 			if (rootNode == null)
 				return 0;
+				
 			return 1 + size(rootNode.getLeftNode()) + size(rootNode.getRightNode());
 	
 		}
@@ -165,7 +165,7 @@
 	
 			if (rootNode == null)
 				return 0;
-	
+			
 			int i = height(rootNode.getLeftNode());
 			int j = height(rootNode.getRightNode());
 	
@@ -261,7 +261,7 @@
 		 * @param node
 		 */
 		public void preOrderByNonRecursive(BinaryNode p) {
-	
+			
 			Stack<BinaryNode> stack = new Stack<BinaryNode>();
 			BinaryNode node = p;
 			while (node != null || stack.size() > 0) {
@@ -319,7 +319,7 @@
 		 * @param p
 		 */
 		public void afterOrderByNonRecursive(BinaryNode p) {
-	
+			
 			Stack<BinaryNode> stack = new Stack<BinaryNode>();
 	
 			BinaryNode node = p;
@@ -362,6 +362,7 @@
 				System.out.print(root.getValue() + " "); /* 访问根结点 */
 				inOrder(root.getRightNode()); /* 中序遍历右子树 */
 			}
+			
 		}
 	
 		/**
@@ -370,14 +371,15 @@
 		 * @param node
 		 */
 		public void afterOrder(BinaryNode node) {
-			if (node.getLeftNode() != null) {
-				this.afterOrder(node.getLeftNode());
+			
+			if (node != null) {
+				
+				inOrder(node.getLeftNode()); /* 后序遍历左子树 */
+				inOrder(node.getRightNode()); /* 后序遍历右子树 */
+				System.out.print(node.getValue() + " "); /* 访问根结点 */
+			
 			}
-			if (node.getRightNode() != null) {
-				this.afterOrder(node.getRightNode());
-			}
-	
-			System.out.print(node.getValue() + " ");
+			
 		}
 	
 		/**
@@ -397,9 +399,9 @@
 			boolean flag = preorder == null ? true : (inorder == null ? true
 					: (length == 0 ? true : false));
 	
-			if (flag) {
-				return null;
-			}
+			if (flag) 
+				throw new RuntimeException("传入的前序,中序数组为null,或者长度为0...");
+			
 	
 			// 开始以前序,中序数组来进行构建二叉树
 			return constructBinaryOfArray(preorder, 0, length - 1, inorder, 0,
@@ -433,9 +435,8 @@
 				int startInorder, int endInorder) {
 	
 			// 对传入的前序,中序数组进行边界判断处理
-			if (startPreorder > endPreorder || startPreorder > preorder.length - 1) {
-				return null;
-			}
+			if (startPreorder > endPreorder || startPreorder > preorder.length - 1) 
+				throw new RuntimeException("前序,中序数组游标边界错误...");		
 	
 			// 前序数组起始一个元素就是根结点的值
 			int rootValue = preorder[startPreorder];
