@@ -58,6 +58,12 @@
 			System.out.println("树的镜像:");	
 			tree.preOrderByNonRecursive(tree.getMirrorRec(tree.getRootNode()));
 			
+			System.out.println();
+			System.out.println("-------------");
+			
+			System.out.println("从根结点开始从上到下依次输出:");
+			PriFroToBotOfBT.printFroToBotOfBT(tree.getRootNode());
+			
 		}
 	
 		// 根结点
