@@ -1,7 +1,5 @@
-	
-	
 	package cn.march.algo.tree;
-
+	
 	import java.util.Stack;
 	
 	/**
@@ -12,15 +10,15 @@
 	 */
 	public class BinaryTree {
 	
-		
 		/**
 		 * 测试主方法
+		 * 
 		 * @param args
 		 */
 		public static void main(String[] args) {
 	
 			BinaryTree tree = new BinaryTree();
-			//构建二叉树
+			// 构建二叉树
 			tree.buildBinaryTreeOfPreAndIn(new int[] { 1, 2, 4, 7, 3, 5, 6, 8 },
 					new int[] { 4, 7, 2, 1, 5, 3, 8, 6 }, 8);
 	
@@ -34,18 +32,17 @@
 			System.out.println("-------------");
 			System.out.println("后序遍历: ");
 			tree.afterOrder(tree.getRootNode());
-			
+	
 			System.out.println();
 			System.out.println("-------------");
 			System.out.println("结点数量: " + tree.getSize(false));
-			
+	
 			System.out.println("-------------");
 			System.out.println("二叉树高度: " + tree.getHeight());
-			
+	
 			System.out.println("--------------");
-			
-			
-			System.out.println("非递归遍历: " );
+	
+			System.out.println("非递归遍历: ");
 			System.out.println("前序：");
 			tree.preOrderByNonRecursive(tree.getRootNode());
 			System.out.println();
@@ -54,6 +51,13 @@
 			System.out.println();
 			System.out.println("后序");
 			tree.afterOrderByNonRecursive(tree.getRootNode());
+	
+			System.out.println();
+			System.out.println("------------");
+	
+			System.out.println("树的镜像:");	
+			tree.preOrderByNonRecursive(tree.getMirrorRec(tree.getRootNode()));
+			
 			
 		}
 	
@@ -64,218 +68,290 @@
 		// 树的高度
 		@SuppressWarnings("unused")
 		private int height;
-		
-		
-		
-		
+	
+		/**
+		 * 获取指定的镜像,封装其细节
+		 * 
+		 * @param rootNode
+		 * @return
+		 */
+		public BinaryNode getMirrorRec(BinaryNode rootNode) {
+	
+			BinaryNode temp = copyTree(rootNode);
+	
+			mirrorRecurse(temp);
+	
+			return temp;
+	
+		}
+	
+		/**
+		 * 复制一个二叉树
+		 * @param rootNode
+		 * @return
+		 */
+		public BinaryNode copyTree(BinaryNode rootNode) {
+			
+			//边界判断
+			if (rootNode == null)
+				return null;
+			
+			//获取当前结点
+			BinaryNode copyNode = new BinaryNode(null, rootNode.getValue(), null);
+			//设置左右结点
+			copyNode.setLeftNode(rootNode.getLeftNode());
+			copyNode.setRightNode(rootNode.getRightNode());
+	
+			//递归：左子树，右子树
+			if (rootNode.getLeftNode() != null)
+				copyTree(rootNode.getLeftNode());
+	
+			if (rootNode.getRightNode() != null)
+				copyTree(rootNode.getRightNode());
+	
+			return copyNode;
+		}
+	
+		/**
+		 * 转换指定树的镜像,实现细节
+		 * 
+		 * @param rootNode
+		 */
+		private void mirrorRecurse(BinaryNode rootNode) {
+	
+			// 边界处理
+			boolean flag = rootNode == null ? true
+					: (rootNode.getLeftNode() == null ? true : (rootNode
+							.getRightNode() == null ? true : false));
+	
+			if (flag)
+				return;
+	
+			// 交换左右子树结点
+			BinaryNode tempNode = rootNode.getLeftNode();
+	
+			rootNode.setLeftNode(rootNode.getRightNode());
+			rootNode.setRightNode(tempNode);
+	
+			if (rootNode.getLeftNode() != null)
+				mirrorRecurse(rootNode.getLeftNode());
+	
+			if (rootNode.getRightNode() != null)
+				mirrorRecurse(rootNode.getRightNode());
+	
+		}
+	
 		/**
 		 * 计算二叉树结点数量
+		 * 
 		 * @param rootNode
 		 * @return
 		 */
-		private int size(BinaryNode rootNode){
-			
-			if(rootNode == null)
+		private int size(BinaryNode rootNode) {
+	
+			if (rootNode == null)
 				return 0;
-			return 1 + size(rootNode.getLeftNode()) 
-					 + size(rootNode.getRightNode());
-		
+			return 1 + size(rootNode.getLeftNode()) + size(rootNode.getRightNode());
+	
 		}
-		
+	
 		/**
 		 * 计算二叉树高度
+		 * 
 		 * @param rootNode
 		 * @return
 		 */
-		private int height(BinaryNode rootNode){
-			
-			if(rootNode == null)
+		private int height(BinaryNode rootNode) {
+	
+			if (rootNode == null)
 				return 0;
-			
+	
 			int i = height(rootNode.getLeftNode());
 			int j = height(rootNode.getRightNode());
-			
-			return i < j ? j+1 : i+1;
+	
+			return i < j ? j + 1 : i + 1;
 		}
-		
-		
+	
 		/**
 		 * 删除二叉树的某个结点,当删除这个结点时(其左子树,右子树也需要删除)
+		 * 
 		 * @param elementNode
 		 */
 		public void destroy(BinaryNode elementNode) {
-			
-			if(elementNode != null){
-				//删除对应的左子树
+	
+			if (elementNode != null) {
+				// 删除对应的左子树
 				destroy(elementNode.getLeftNode());
-				//删除对应的右子树
+				// 删除对应的右子树
 				destroy(elementNode.getRightNode());
-				
+	
 				elementNode = null;
-				
+	
 			}
-			
+	
 		}
-		
-		
+	
 		/**
 		 * 返回指定结点的双亲结点
+		 * 
 		 * @param elementNode
 		 * @return
 		 */
-		public BinaryNode parent(BinaryNode elementNode){
-			return (rootNode == null || rootNode == elementNode) ? null : parent(rootNode, elementNode);
+		public BinaryNode parent(BinaryNode elementNode) {
+			return (rootNode == null || rootNode == elementNode) ? null : parent(
+					rootNode, elementNode);
 		}
-		
+	
 		/**
-		 * 实现细节:
-		 * 		递归查找(左子树,右子树)
+		 * 实现细节: 递归查找(左子树,右子树)
+		 * 
 		 * @param rootNode
 		 * @param elementNode
 		 * @return
 		 */
-		private BinaryNode parent(BinaryNode rootNode, BinaryNode elementNode){
-			
-			if(rootNode.getLeftNode() == elementNode || rootNode.getRightNode() == elementNode) {
+		private BinaryNode parent(BinaryNode rootNode, BinaryNode elementNode) {
+	
+			if (rootNode.getLeftNode() == elementNode
+					|| rootNode.getRightNode() == elementNode) {
 				return rootNode;
 			}
-			
+	
 			BinaryNode tempNode = null;
-			
-			if((tempNode = parent(rootNode.getLeftNode(), elementNode)) != null)
+	
+			if ((tempNode = parent(rootNode.getLeftNode(), elementNode)) != null)
 				return tempNode;
-			
+	
 			return parent(rootNode.getRightNode(), elementNode);
-			
+	
 		}
-		
-		
+	
 		/**
-		 * 提供给外部的方法(封装了实现过程):
-		 * 	通过前序,中序遍历数组构建二叉树
+		 * 提供给外部的方法(封装了实现过程): 通过前序,中序遍历数组构建二叉树
+		 * 
 		 * @param preorder
 		 * @param inorder
 		 * @param length
 		 */
 		public void buildBinaryTreeOfPreAndIn(int[] preorder, int[] inorder,
 				int length) {
-			
+	
 			this.setRootNode(constructBinaryOfArray(preorder, inorder, length));
 	
 			this.setSize(length);
 		}
-		
+	
 		/**
 		 * 前序遍历(递归实现)
+		 * 
 		 * @param node
 		 */
 		public void preOrder(BinaryNode node) {
-			
-			if(node != null){
+	
+			if (node != null) {
 				System.out.print(node.getValue() + " ");
 				preOrder(node.getLeftNode());
 				preOrder(node.getRightNode());
 			}
-			
+	
 		}
-		
+	
 		/**
-		 * 前序遍历(非递归实现)
-		 * 	思路：利用一个栈来存储结点
-		 * 		 若存在左子树,进行入栈打印操作
-		 * 		 若栈非空,顶部结点出栈,获取右结点
+		 * 前序遍历(非递归实现) 思路：利用一个栈来存储结点 若存在左子树,进行入栈打印操作 若栈非空,顶部结点出栈,获取右结点
+		 * 
 		 * @param node
 		 */
 		public void preOrderByNonRecursive(BinaryNode p) {
-			
-			Stack<BinaryNode> stack = new Stack<BinaryNode>();  
-	        BinaryNode node = p;  
-	        while(node != null || stack.size()>0){  
-	            //存在左子树  
-	            while(node != null){  
-	            	
-	                stack.push(node);  
-	                System.out.print(node.getValue() + " ");
-	                node = node.getLeftNode();  
-	            
-	            }  
-	            //栈非空  
-	            if(stack.size()>0){  
-	            
-	            	node = stack.pop();  
-	                node = node.getRightNode();  
-	            
-	            }  
-	        }   			
+	
+			Stack<BinaryNode> stack = new Stack<BinaryNode>();
+			BinaryNode node = p;
+			while (node != null || stack.size() > 0) {
+				// 存在左子树
+				while (node != null) {
+	
+					stack.push(node);
+					System.out.print(node.getValue() + " ");
+					node = node.getLeftNode();
+	
+				}
+				// 栈非空
+				if (stack.size() > 0) {
+	
+					node = stack.pop();
+					node = node.getRightNode();
+	
+				}
+			}
 		}
-		
+	
 		/**
-		 * 中序遍历非递归实现
-		 * 思路：参考前序遍历
+		 * 中序遍历非递归实现 思路：参考前序遍历
+		 * 
 		 * @param p
 		 */
-	    public void inOrderByNonRecursive(BinaryNode p){  
-	        
-	    	Stack<BinaryNode> stack = new Stack<BinaryNode>();  
-	        
-	    	BinaryNode node = p;  
-	        
-	    	while(node != null || stack.size()>0){  
-	            //存在左子树  
-	            while(node != null){  
-	        
-	            	stack.push(node);  
-	                node = node.getLeftNode();  
-	            
-	            }  
-	            //栈非空  
-	            if(stack.size()>0){  
-	            
-	            	node = stack.pop();  
-	                System.out.print(node.getValue() + " ");
-	                node = node.getRightNode();  
-	            
-	            }  
-	        }  
-	    }  
-	      
-	    /**
-	     * 后序遍历非递归实现  
-	     * @param p
-	     */
-	    public void afterOrderByNonRecursive(BinaryNode p){  
-	        
-	    	Stack<BinaryNode> stack = new Stack<BinaryNode>();  
-	        
-	    	BinaryNode node = p;  
-	        
-	    	while(p != null){  
-	            //左子树入栈  
-	            for( ; p.getLeftNode() != null; p=p.getLeftNode()){  
-	                stack.push(p);  
-	            }  
-	            //当前结点无右子树或右子树已经输出  
-	            while(p.getRightNode() == null || p.getRightNode() == node){  
-	                System.out.print(p.getValue() + " ");  
-	                //纪录上一个已输出结点  
-	                node = p;  
-	                
-	                if(stack.empty())  
-	                    return;  
-	                
-	                p = stack.pop();  
-	            
-	            }  
-	            
-	            //处理右子树  
-	            stack.push(p);  
-	            
-	            p = p.getRightNode();  
-	        }  
-	    } 
-		
+		public void inOrderByNonRecursive(BinaryNode p) {
+	
+			Stack<BinaryNode> stack = new Stack<BinaryNode>();
+	
+			BinaryNode node = p;
+	
+			while (node != null || stack.size() > 0) {
+				// 存在左子树
+				while (node != null) {
+	
+					stack.push(node);
+					node = node.getLeftNode();
+	
+				}
+				// 栈非空
+				if (stack.size() > 0) {
+	
+					node = stack.pop();
+					System.out.print(node.getValue() + " ");
+					node = node.getRightNode();
+	
+				}
+			}
+		}
+	
+		/**
+		 * 后序遍历非递归实现
+		 * 
+		 * @param p
+		 */
+		public void afterOrderByNonRecursive(BinaryNode p) {
+	
+			Stack<BinaryNode> stack = new Stack<BinaryNode>();
+	
+			BinaryNode node = p;
+	
+			while (p != null) {
+				// 左子树入栈
+				for (; p.getLeftNode() != null; p = p.getLeftNode()) {
+					stack.push(p);
+				}
+				// 当前结点无右子树或右子树已经输出
+				while (p.getRightNode() == null || p.getRightNode() == node) {
+					System.out.print(p.getValue() + " ");
+					// 纪录上一个已输出结点
+					node = p;
+	
+					if (stack.empty())
+						return;
+	
+					p = stack.pop();
+	
+				}
+	
+				// 处理右子树
+				stack.push(p);
+	
+				p = p.getRightNode();
+			}
+		}
+	
 		/**
 		 * 中序遍历
+		 * 
 		 * @param root
 		 */
 		public void inOrder(BinaryNode root)
@@ -288,9 +364,9 @@
 			}
 		}
 	
-		
 		/**
 		 * 后序遍历二叉树
+		 * 
 		 * @param node
 		 */
 		public void afterOrder(BinaryNode node) {
@@ -303,9 +379,7 @@
 	
 			System.out.print(node.getValue() + " ");
 		}
-		
 	
-		
 		/**
 		 * 构建二叉树(通过前序遍历数组,中序遍历数组进行构建)
 		 * 
@@ -387,8 +461,8 @@
 	
 				/*
 				 * 递归调用,在前序数组中计算得到了左子树的区域: 
-				 * 		(startPreorder + 1 ----- leftPreorderEndOfRight) 
-				 * 在中序数组中计算得到了左子树的区域： 
+				 * 		(startPreorder + 1 -----  leftPreorderEndOfRight) 
+				 * 在中序数组中计算得到了左子树的区域：
 				 * 		(startInorder,leftLength - 1)
 				 */
 				rootNode.setLeftNode(constructBinaryOfArray(preorder,
@@ -401,7 +475,7 @@
 	
 				/*
 				 * 递归调用,在前序数组中计算得到了右子树的区域： 
-				 * 		(leftPreorderEndOfRight + 1 ------ endPreorder)
+				 * 		(leftPreorderEndOfRight + 1 ------ endPreorder) 
 				 * 在中序数组中计算得到了右子树的区域： 
 				 * 		(leftLength + 1 ------- endInorder)
 				 */
@@ -453,26 +527,22 @@
 			this.rootNode = rootNode;
 		}
 	
-		//isBuilder代表是否是直接通过数组构建二叉树
+		// isBuilder代表是否是直接通过数组构建二叉树
 		public int getSize(boolean isBuilder) {
-			if(isBuilder){
+			if (isBuilder) {
 				return size;
 			}
-			
+	
 			return size(rootNode);
 		}
-		
-		private void setSize(int size){
+	
+		private void setSize(int size) {
 			this.size = size;
 		}
-		
 	
-	
-		public int getHeight(){
+		public int getHeight() {
 			return height(rootNode);
 		}
-		
-		
 	
 		/**
 		 * 二叉树数据结构
