@@ -64,6 +64,10 @@
 			System.out.println("从根结点开始从上到下依次输出:");
 			PriFroToBotOfBT.printFroToBotOfBT(tree.getRootNode());
 			
+			System.out.println();
+			System.out.println("二叉搜索树的验证,传入后序数组：5,7,6,9,11,10,12,8 结果:");
+			System.out.println(tree.verifyAfterArrayBST(new int[]{5,7,6,9,11,10,12,8}, 0, 8));
+			
 		}
 	
 		// 根结点
@@ -74,6 +78,85 @@
 		@SuppressWarnings("unused")
 		private int height;
 	
+		
+		
+		
+		
+		/**
+		 * 通过一个树的后序遍历数组,判断其是不是二叉搜索树
+		 * 基本思路：
+		 * 		后序遍历数组的特点就是数组最后一个元素就是根结点值
+		 * 		而二叉搜索树
+		 * 		1.做边界判断处理,抛出异常
+		 * 		2.获取根结点值,找到小于结点值与大于结点值的边界游标
+		 * 		3.以计算的游标开始遍历数组,如果其中中小于根结点的元素直接返回false;
+		 *		4.开始递归对左右子树中的结点进行判断
+		 *
+		 * @param afterOrder
+		 * @param start
+		 * @param length
+		 * @return
+		 */
+		public Boolean verifyAfterArrayBST(int [] afterOrder, int start,  int length) {
+			
+			//边界处理
+			if(afterOrder == null || length == 0)
+				throw new RuntimeException("传入的后序数组不能为null....");
+			
+			if(start < 0 || length > afterOrder.length) 
+				throw new RuntimeException("传入的起始,结束游标不合法...");
+			
+			/*
+			if(afterOrder.length == 1 && length == 1)
+				return true;*/
+			
+			//拿到根结点
+			int rootValue = afterOrder[length-1];
+			
+			int i = start;
+			
+			//找到边界游标
+			for( ; i < length-1; i++) {
+				
+				
+				if(afterOrder[i] > rootValue)
+					break;
+			
+			}
+
+			
+			int j = i;
+			
+			//判断游标之后是否有小于根结点的元素
+			for( ; j < length-1; ++j) {
+								
+				if(afterOrder[j] < rootValue)
+					return false;
+			
+			}	
+			
+			Boolean flagLeft = true;
+			
+			//递归,验证左子树
+			if(i > 0) {
+				
+				flagLeft = verifyAfterArrayBST(afterOrder, start, i);
+				
+			}
+			
+			Boolean flagRight = true;
+			
+			//递归,验证右子树
+			if(j < length-1) {
+				flagRight = verifyAfterArrayBST(afterOrder, length-i-1, length-1);
+			}
+			
+			
+			return flagLeft && flagRight;
+			
+		}
+		
+		
 		/**
 		 * 获取指定的镜像,封装其细节
 		 * 
