@@ -1,6 +1,8 @@
 	
 	
 	package cn.march.algo.tree;
+
+import java.util.Stack;
 	
 	/**
 	 * 二叉树实现类
@@ -18,6 +20,7 @@
 		public static void main(String[] args) {
 	
 			BinaryTree tree = new BinaryTree();
+			//构建二叉树
 			tree.buildBinaryTreeOfPreAndIn(new int[] { 1, 2, 4, 7, 3, 5, 6, 8 },
 					new int[] { 4, 7, 2, 1, 5, 3, 8, 6 }, 8);
 	
@@ -32,11 +35,26 @@
 			System.out.println("后序遍历: ");
 			tree.afterOrder(tree.getRootNode());
 			
+			System.out.println();
 			System.out.println("-------------");
 			System.out.println("结点数量: " + tree.getSize(false));
 			
 			System.out.println("-------------");
 			System.out.println("二叉树高度: " + tree.getHeight());
+			
+			System.out.println("--------------");
+			
+			
+			System.out.println("非递归遍历: " );
+			System.out.println("前序：");
+			tree.preOrderByNonRecursive(tree.getRootNode());
+			System.out.println();
+			System.out.println("中序");
+			tree.inOrderByNonRecursive(tree.getRootNode());
+			System.out.println();
+			System.out.println("后序");
+			tree.afterOrderByNonRecursive(tree.getRootNode());
+			
 		}
 	
 		// 根结点
@@ -148,7 +166,7 @@
 		}
 		
 		/**
-		 * 前序遍历
+		 * 前序遍历(递归实现)
 		 * @param node
 		 */
 		public void preOrder(BinaryNode node) {
@@ -160,7 +178,102 @@
 			}
 			
 		}
-	
+		
+		/**
+		 * 前序遍历(非递归实现)
+		 * 	思路：利用一个栈来存储结点
+		 * 		 若存在左子树,进行入栈打印操作
+		 * 		 若栈非空,顶部结点出栈,获取右结点
+		 * @param node
+		 */
+		public void preOrderByNonRecursive(BinaryNode p) {
+			
+			Stack<BinaryNode> stack = new Stack<BinaryNode>();  
+	        BinaryNode node = p;  
+	        while(node != null || stack.size()>0){  
+	            //存在左子树  
+	            while(node != null){  
+	            	
+	                stack.push(node);  
+	                System.out.print(node.getValue() + " ");
+	                node = node.getLeftNode();  
+	            
+	            }  
+	            //栈非空  
+	            if(stack.size()>0){  
+	            
+	            	node = stack.pop();  
+	                node = node.getRightNode();  
+	            
+	            }  
+	        }   			
+		}
+		
+		/**
+		 * 中序遍历非递归实现
+		 * 思路：参考前序遍历
+		 * @param p
+		 */
+	    public void inOrderByNonRecursive(BinaryNode p){  
+	        
+	    	Stack<BinaryNode> stack = new Stack<BinaryNode>();  
+	        
+	    	BinaryNode node = p;  
+	        
+	    	while(node != null || stack.size()>0){  
+	            //存在左子树  
+	            while(node != null){  
+	        
+	            	stack.push(node);  
+	                node = node.getLeftNode();  
+	            
+	            }  
+	            //栈非空  
+	            if(stack.size()>0){  
+	            
+	            	node = stack.pop();  
+	                System.out.print(node.getValue() + " ");
+	                node = node.getRightNode();  
+	            
+	            }  
+	        }  
+	    }  
+	      
+	    /**
+	     * 后序遍历非递归实现  
+	     * @param p
+	     */
+	    public void afterOrderByNonRecursive(BinaryNode p){  
+	        
+	    	Stack<BinaryNode> stack = new Stack<BinaryNode>();  
+	        
+	    	BinaryNode node = p;  
+	        
+	    	while(p != null){  
+	            //左子树入栈  
+	            for( ; p.getLeftNode() != null; p=p.getLeftNode()){  
+	                stack.push(p);  
+	            }  
+	            //当前结点无右子树或右子树已经输出  
+	            while(p.getRightNode() == null || p.getRightNode() == node){  
+	                System.out.print(p.getValue() + " ");  
+	                //纪录上一个已输出结点  
+	                node = p;  
+	                
+	                if(stack.empty())  
+	                    return;  
+	                
+	                p = stack.pop();  
+	            
+	            }  
+	            
+	            //处理右子树  
+	            stack.push(p);  
+	            
+	            p = p.getRightNode();  
+	        }  
+	    } 
+		
 		/**
 		 * 中序遍历
 		 * @param root
