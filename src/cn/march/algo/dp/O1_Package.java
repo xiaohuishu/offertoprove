@@ -2,6 +2,9 @@
 
 
 	package cn.march.algo.dp;
+
+	import java.util.HashMap;
+	import java.util.Map;
 	
 	
 	
@@ -12,14 +15,18 @@
 	 */
 	public class O1_Package {
 	
+		
 		//测试主方法
 		public static void main(String[] args) {
-	
+			
+			Map<Integer, Integer> maps = new HashMap<Integer, Integer>();
+			
 			Package pack = new Package(new int[] { 2, 1, 3, 2 }, new int[] { 3, 2,
 					4, 2 }, 5);
 	
-			System.out.println(t01_PackageDP(0, pack , 5));
+			System.out.println(t01_PackageDC(0, pack , 5));
 	
+			System.out.println(t02_PackageDP(0, pack, 5, maps));
 	
 		}
 	
@@ -31,7 +38,7 @@
 		 * @param max_weight
 		 * @return
 		 */
-		public static int t01_PackageDP(int i, Package pack, int max_weight) {
+		public static int t01_PackageDC(int i, Package pack, int max_weight) {
 	
 			int max_values;
 			
@@ -41,17 +48,49 @@
 	
 			//如果当前背包位置有超过允许最大重量的,直接访问下一个
 			else if (max_weight < pack.getWeights()[i])
-				max_values = t01_PackageDP(i + 1, pack, max_weight);
+				max_values = t01_PackageDC(i + 1, pack, max_weight);
 	
 			else
 				max_values = Math.max(
-						t01_PackageDP(i + 1, pack, max_weight),
-						t01_PackageDP(i + 1, pack,
+						t01_PackageDC(i + 1, pack, max_weight),
+						t01_PackageDC(i + 1, pack,
 								max_weight - pack.getWeights()[i])
 								+ pack.getValues()[i]);
 	
 			return max_values;
 		}
+		
+		/**
+		 * 动态规划(缓存)
+		 * @param i
+		 * @param pack
+		 * @param max_weight
+		 * @param maps
+		 * @return
+		 */
+		public static int t02_PackageDP(int i, Package pack, int max_weight, Map<Integer,Integer> maps) {
+
+			
+			if (i == pack.getWeights().length)
+				return 0;
+	
+			else if(maps.containsKey(pack.getWeights()[i]))
+				return (int) maps.get(pack.getWeights()[i]);
+			
+			//如果当前背包位置有超过允许最大重量的,直接访问下一个
+			else if (max_weight < pack.getWeights()[i]){
+				maps.put(pack.getWeights()[i], t01_PackageDC(i + 1, pack, max_weight));
+			}
+			else
+				maps.put(pack.getWeights()[i],Math.max(
+						t01_PackageDC(i + 1, pack, max_weight),
+						t01_PackageDC(i + 1, pack,
+								max_weight - pack.getWeights()[i])
+								+ pack.getValues()[i]));
+	
+			return maps.get(pack.getWeights()[i]);
+		}
+		
 		
 		/**
 		 * 背包实体类
@@ -86,12 +125,7 @@
 				return this.max_weight;
 			}
 	
-			public Package setMax_weight(int max_weight) {
 	
-				return new Package(this.weights, this.values, max_weight);
-	
-				// return this;
-			}
 	
 		}
 	
