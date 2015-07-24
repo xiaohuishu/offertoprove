@@ -9,22 +9,57 @@ public class O1_Package {
 
 		System.out.println(t01_PackageDP(0, pack));
 
+		System.out.println(t02_PackageDP(0,new int[] { 2, 1, 3, 2 }, new int[] { 3, 2,
+				4, 2 }, 5));
+		
 	}
-
-	public static int t01_PackageDP(int i, Package pack) {
+	
+	public static int t02_PackageDP(int i, int[] weights, int[] values, int j) {
 		
 		int max_values;
-		
-		if(i == pack.weights.length) 
+
+		if (i == weights.length)
 			max_values = 0;
+
+		else if (j < weights[i])
+			max_values = t02_PackageDP(i + 1,weights, values, j);
+
+		else
+			max_values = Math.max(
+					t02_PackageDP(i + 1, weights, values, j),
+					t02_PackageDP(
+							i + 1,
+							weights, values, j-weights[i])
+							+ values[i]);
+
+		return max_values;
+
 		
-		else if(pack.max_weight < pack.weights[i]) 
-			max_values = t01_PackageDP(i+1, pack);
+	}
+	
+
+	public static int t01_PackageDP(int i, Package pack) {
+
 		
-		else 
-			max_values = Math.max(t01_PackageDP(i+1 , pack), t01_PackageDP(i+1,pack.setMax_weight(pack.getMax_weight()-pack.weights[i]))+pack.getValues()[i]);
 		
 		
+		int max_values;
+
+		if (i == pack.getWeights().length)
+			max_values = 0;
+
+		else if (pack.getMax_weight() < pack.getWeights()[i])
+			max_values = t01_PackageDP(i + 1, pack);
+
+		else
+			max_values = Math.max(
+					t01_PackageDP(i + 1, pack),
+					t01_PackageDP(
+							i + 1,
+							pack.setMax_weight(pack.getMax_weight()
+									- pack.getWeights()[i]))
+							+ pack.getValues()[i]);
+
 		return max_values;
 	}
 
@@ -57,9 +92,10 @@ public class O1_Package {
 		}
 
 		public Package setMax_weight(int max_weight) {
-			this.max_weight = max_weight;
 			
-			return this;
+			return new Package(this.weights, this.values, max_weight);
+
+			//return this;
 		}
 
 	}
