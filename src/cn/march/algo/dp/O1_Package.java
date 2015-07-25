@@ -4,7 +4,7 @@
 	package cn.march.algo.dp;
 
 	import java.util.HashMap;
-	import java.util.Map;
+import java.util.Map;
 	
 	
 	
@@ -27,7 +27,9 @@
 			System.out.println(t01_PackageDC(0, pack , 5));
 	
 			System.out.println(t02_PackageDP(0, pack, 5, maps));
-	
+			
+			System.out.println(t03_PackageDPCycle(pack, 5));
+			
 		}
 	
 	
@@ -73,7 +75,7 @@
 			
 			if (i == pack.getWeights().length)
 				return 0;
-	
+			
 			else if(maps.containsKey(pack.getWeights()[i]))
 				return (int) maps.get(pack.getWeights()[i]);
 			
@@ -89,6 +91,39 @@
 								+ pack.getValues()[i]));
 	
 			return maps.get(pack.getWeights()[i]);
+		}
+		
+		
+		public static int t03_PackageDPCycle(Package pack, int max_weight) {
+			
+			int [][] select = new int[pack.getWeights().length+1][max_weight+1];
+			
+			for(int w = 1; w <= max_weight; ++w)
+				select[0][w] = 0;
+			for(int i = 1; i < pack.getWeights().length; ++i) {
+				
+				select[i][0] = 0;
+				
+				for(int w = 1; w <= max_weight; ++w) {
+					
+					if(pack.getWeights()[i] <= w) {
+						
+						if(pack.getValues()[i] + select[i-1][w-pack.getWeights()[i]] > select[i-1][w])
+							select[i][w] = pack.getValues()[i] + select[i-1][w-pack.getWeights()[i]];
+						else 
+							select[i][w] = select[i-1][w];
+							
+						
+					}else
+						select[i][w] = select[i-1][w];
+				
+				}
+				
+				
+			}
+			
+			return select[0][pack.getMax_weight()];
+			
 		}
 		
 		
