@@ -89,34 +89,26 @@ public class O1_Package {
 		return maps.get(pack.getWeights()[i]);
 	}
 
+	/**
+	 * 动态规划(不利用缓存递归方式,使用循环)
+	 * 		思路：首先推理得到一个递推式：
+	 * 			i代表哪个物品
+	 * 			j代表最大负重
+	 * 			select[i][j] = max(select[i+1][j], select[i+1][j-w[i]] + v[i]);
+	 * 
+	 * @param pack
+	 * @param max_weight
+	 * @return
+	 */
 	public static int t03_PackageDPCycle(Package pack, int max_weight) {
 
+		//初始化二维数组(二维表)
 		int[][] select = new int[pack.getWeights().length + 1][max_weight + 1];
-
+		
 		for (int w = 1; w <= max_weight; ++w)
 			select[0][w] = 0;
-		/*
-		 * for(int i = 1; i < pack.getWeights().length; ++i) {
-		 * 
-		 * select[i][0] = 0;
-		 * 
-		 * for(int w = 1; w <= max_weight; ++w) {
-		 * 
-		 * if(pack.getWeights()[i] <= w) {
-		 * 
-		 * if(pack.getValues()[i] + select[i-1][w-pack.getWeights()[i]] >
-		 * select[i-1][w]) select[i][w] = pack.getValues()[i] +
-		 * select[i-1][w-pack.getWeights()[i]]; else select[i][w] =
-		 * select[i-1][w];
-		 * 
-		 * 
-		 * }else select[i][w] = select[i-1][w];
-		 * 
-		 * }
-		 * 
-		 * 
-		 * }
-		 */
+		
+		//开始计算
 		for (int i = pack.getWeights().length - 1; i >= 0; --i) {
 			for (int j = 0; j <= max_weight; ++j) {
 				if (j < pack.getWeights()[i]) // select[i][j] = select[i+1][j];
