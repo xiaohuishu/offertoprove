@@ -147,9 +147,9 @@
 			Boolean flagRight = true;
 			
 			//递归,验证右子树
-			if(j < length-1) {
+			if(j < length-1) 
 				flagRight = verifyAfterArrayBST(afterOrder, length-i-1, length-1);
-			}
+			
 			
 			
 			return flagLeft && flagRight;
