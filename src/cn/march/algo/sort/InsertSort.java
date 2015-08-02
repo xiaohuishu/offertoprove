@@ -6,9 +6,9 @@
 	
 	
 	
-	
 	public class InsertSort {
 		
+		//测试方法
 		public static void main(String[] args) {
 		
 			int [] sortArrays = new int[]{1,3,2,9,6,4,8,15};
