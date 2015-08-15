@@ -33,7 +33,34 @@
 		 * 			mergeSortedArray(int[] sortArrays,
 		 *					int[] sortArraysTemp, int left, int middle, int right)
 		 *		
-		 *		 		
+		 * 时间复杂度：
+		 * 	
+		 * 		计算公式：
+		 * 					O(1)   n<=c
+		 * 				--->
+		 * 		T(n) = 
+		 *              --->
+		 * 					2T(n/2) + O(n)  n>c
+		 *		
+		 *		计算思路：
+		 *			
+		 *			
+		 *			如果估计的话，可以这么算：
+		 *				架设n往大取，n=2^s
+		 *				那么公式就变成了：
+		 *					T(2^s)=2T(2^(s-1))+2^s
+		 *				两边同除2^s：
+		 *					T(2^s)/(2^s)=T(2^(s-1))/(2^(s-1))+1
+		 *				设a_s=T(2^s)/(2^s)并假设a_1=1，原式化为：
+		 *					a_s=a_(s-1)+1
+		 *				为等差数列，于是a_s=s
+		 *				于是：
+		 *					T(2^s)/(2^s)=s
+		 * 				那么T(2^s)=s*2^s
+		 *				你再把n=2^s带入就是
+		 *	 			T(n)=nlogn了
+		 *
+		 *	 		
 		 * 
 		 * @param sortArrays
 		 */
@@ -52,6 +79,14 @@
 	        
 		}
 	
+		/**
+		 * 分割数组,以(left + right) / 2为边界进行分割,然后递归调用;
+		 * 
+		 * @param sortArrays
+		 * @param sortArraysTemp
+		 * @param left
+		 * @param right
+		 */
 		private static void internalMergeSort(int[] sortArrays,
 				int[] sortArraysTemp, int left, int right) {
 	
@@ -68,6 +103,15 @@
 	
 		}
 	
+		/**
+		 * 将排序好的左边数组右边数组进行合并
+		 * 
+		 * @param sortArrays
+		 * @param sortArraysTemp
+		 * @param left
+		 * @param middle
+		 * @param right
+		 */
 		private static void mergeSortedArray(int[] sortArrays,
 				int[] sortArraysTemp, int left, int middle, int right) {
 	
