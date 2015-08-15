@@ -14,9 +14,14 @@ public class BloomFilter {
 
     private static BitSet bits = new BitSet(DEFAULT_SIZE);
 	
+    //初始化一个哈希类数组
     private static SimpleHash[] func = new SimpleHash[seeds.length];
 
-    public static void addValue(String value) {
+    /**
+     * 向BitSet添加一个字符串
+     * @param value
+     */
+    private static void addValue(String value) {
 
         for(SimpleHash fun : func) {
 
@@ -26,6 +31,7 @@ public class BloomFilter {
 
     }
 
+    
     public static void add(String value) {
         
         if(value != null)
@@ -33,6 +39,7 @@ public class BloomFilter {
 
     }
 
+    //判断一个字符串是否在BitSet中是否存在
     public static boolean contains(String value) {
         
         if(value == null) 
@@ -66,10 +73,19 @@ public class BloomFilter {
 
 
 
-    //
+    /**
+     * 哈希类：
+     * 	 	一个cap容量(2 << 24),即BitSet容量(很大)和选定的一个质数
+     * 		通过对应的String value字符串来计算一个对应的hash值
+     * 
+     * @author antsmarth
+     *
+     */
     static class SimpleHash {
       
+    	//容量(DEFAULT_SIZE)
         private int cap;
+        //质数
         private int seed;
 
         public SimpleHash(int cap, int seed) {
@@ -79,6 +95,7 @@ public class BloomFilter {
 
         }
 
+        //计算hash值
         public int hash(String value) {
             
             int result = 0;
