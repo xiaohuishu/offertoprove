@@ -121,8 +121,26 @@
 			
 		}
 		
+		/**
+		 * 基本思路：
+		 * 		与上述的非排序数组方式一样,同样维护一个数量为k的数组:k_arrays
+		 * 		通过arrays的前k个数对k_arrays进行初始化
+		 * 		从k开始遍历arrays数组：
+		 * 			先对k_arrays数组进行构建最大堆的处理(makeHeap)
+		 * 			然后取出最大的元素与arrays[k...length-1]进行比较
+		 * 			若k_arrays[k-1] > arrays[k...length-1]：
+		 * 				将arrays[k...length-1]赋值给k_arrays[k-1]
+		 * 			否则
+		 * 				不做处理
+		 * 			继续遍历		
+		 * 
+		 * @param arrays
+		 * @param k
+		 * @param length
+		 */
 		private static void findMinCountOfKByMakeHeap(int[] arrays, int k, int length) {
 			
+			//边界处理
 			if(k <=0 || length <= 0)
 				throw new RuntimeException("设置的参数不合法!");
 			
@@ -133,6 +151,7 @@
 			
 			}
 			
+			//初始化数组
 			int[] k_arrays = new int[k];
 			
 			for(int i = 0; i < k; i++)
@@ -140,6 +159,7 @@
 			
 			for(int i = k; i < length; i++) {
 				
+				//构建最大堆
 				makeHeap(k_arrays, k);
 				
 				if(k_arrays[k-1] > arrays[i])
@@ -156,8 +176,14 @@
 					
 		}
 		
+		/**
+		 * 对k_arrays进行构建最大堆处理
+		 * @param k_arrays
+		 * @param length
+		 */
 		private static void makeHeap(int[] k_arrays, int length) {
 			
+			//边界处理
 			if(length <= 0 || k_arrays == null)
 				throw new RuntimeException("设置参数不合法!");
 			
