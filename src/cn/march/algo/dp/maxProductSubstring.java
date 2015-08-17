@@ -17,17 +17,27 @@
 	 */
 	public class maxProductSubstring {
 	
+		
+		public static void main(String[] args) {
+			
+			double[] queues = new double[]{-2.5, 4, 0, 3, 0.5, 8, -1}; 
+			
+			System.out.println(maxProductSubstringOfDp(queues, 7));
+			System.out.println(maxProductSubstringOfDp(queues, 7));
+		
+		}
+		
 		/**
 		 * 传统的方式解决,通过两次循环的方式来计算;
 		 * @param queues
 		 * @param length
 		 * @return
 		 */
-		private double maxProductSubstringOfNormal(double[] queues, int length) {
+		private static double maxProductSubstringOfNormal(double[] queues, int length) {
 	
 			double maxResult = queues[0];
 	
-			for (int i = 0; i < length; i++) {
+			for (int i = 1; i < length; i++) {
 	
 				double temp = 1;
 	
@@ -37,9 +47,8 @@
 	
 					if (temp > maxResult)
 						maxResult = temp;
-					
 				}
-	
+
 			}
 	
 			return maxResult;
@@ -62,14 +71,14 @@
 		 * @param length
 		 * @return
 		 */
-		private double maxProductSubstringOfDp(double[] queues, int length) {
+		private static double maxProductSubstringOfDp(double[] queues, int length) {
 	
 			double maxEnd = queues[0];
 			double minEnd = queues[0];
 			double maxResult = queues[0];
 	
-			for (int i = 0; i < length; i++) {
-	
+			for (int i = 1; i < length; i++) {
+					
 				double end_max = maxEnd * queues[i];
 				double end_min = maxEnd * queues[i];
 	
@@ -77,7 +86,7 @@
 				minEnd = Math.min(Math.min(end_max, end_min), queues[i]);
 	
 				maxResult = Math.max(maxEnd, maxResult);
-	
+								
 			}
 	
 			return maxResult;
