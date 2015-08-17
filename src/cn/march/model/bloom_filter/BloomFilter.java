@@ -1,7 +1,7 @@
 	
 
 
-	package cn.march.algo.bloom_filter;
+	package cn.march.model.bloom_filter;
 	
 	
 	
