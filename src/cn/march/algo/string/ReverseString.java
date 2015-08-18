@@ -41,6 +41,16 @@
 		 */
 		private static void leftRotateString(String strings, int n, int m) {
 			
+			if(n <= 0 || strings == null)
+				throw new RuntimeException("设置参数不合法!");
+			
+			if(n == 1) {
+				
+				System.out.println(strings);
+				return ;
+			
+			}
+			
 			char[] chars = strings.toCharArray();
 			
 			m %= n; //若需要反转的位数大于m则就直接反转n
