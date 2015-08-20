@@ -16,27 +16,19 @@
 		//测试方法
 		public static void main(String[] args) {
 	
-			mergeArrays(new int[] { 1, 5, 7, 9, 12 },
-					new int[] { 2, 4, 10, 11, 15 }, 5, 5);
+			mergeArrays(new int[] { 1, 5, 7, 9, 12, 13, 17},
+					new int[] { 2, 4, 8, 10, 11,14, 15, 16 }, 7, 8);
 	
 		}
 	
 		/**
 		 * 基本思路：
 		 * 		先进行边界处理：
-		 * 		之后判断两个数组的元素数量是否相等：
-		 * 			boolean flag_equals = fir_length == sec_length:
-		 * 				则正好是归并排序中的合并思路：
-		 * 					首先已fir_length + sec_length建立新的数组merge_temp;
-		 * 					开始first_temp中的元素与second_temp中的元素进行比较,将较小的值先赋值给merge_temp中
-		 * 					等比较完之后,再根据fir,sec的游标位置,将剩下的值同样赋值到merge_temp中
-		 * 		两个数组的元素数量不想等：
-		 * 			boolean flag_nonequals = fir_length > sec_length ? true : false;
-		 * 			first_temp.length > second_temp.length:
-		 * 				处理思路：
-		 * 
-		 * 			first_temp.length < second_temp.length:
-		 * 				处理思路： 	
+		 * 		
+		 * 			则正好是归并排序中的合并思路：
+		 * 				首先已fir_length + sec_length建立新的数组merge_temp;
+		 * 				开始first_temp中的元素与second_temp中的元素进行比较,将较小的值先赋值给merge_temp中
+		 *				等比较完之后,再根据fir,sec的游标位置,将剩下的值同样赋值到merge_temp中
 		 * 	
 		 * 
 		 * @param first_temp
@@ -69,44 +61,24 @@
 	
 			int i = 0;
 	
-			boolean flag_equals = fir_length == sec_length;
-	
-			//合并的两个数组想等的情况：
-			if (flag_equals) {
-	
-				int fir = 0;
-				int sec = 0;
-	
-				while (fir < fir_length && sec < sec_length) {
-	
-					if (first_temp[fir] > second_temp[sec])
-						merge_temp[i++] = second_temp[sec++];
-					else
-						merge_temp[i++] = first_temp[fir++];
-	
-				}
-	
-				while (fir < fir_length)
-					merge_temp[i++] = first_temp[fir++];
-				while (sec < sec_length)
+			int fir = 0;
+			int sec = 0;
+
+			while (fir < fir_length && sec < sec_length) {
+
+				if (first_temp[fir] > second_temp[sec])
 					merge_temp[i++] = second_temp[sec++];
-	
-			}else {
-				
-				//合并的两个数组元素数量不相等的情况
-				boolean flag_nonequals = fir_length > sec_length;
-				
-				//处理过程
-				if(flag_nonequals) {
-					
-				}else {
-					
-				}
-	
-				
-				
+				else
+					merge_temp[i++] = first_temp[fir++];
+
 			}
-	
+
+			while (fir < fir_length)
+				merge_temp[i++] = first_temp[fir++];
+			while (sec < sec_length)
+				merge_temp[i++] = second_temp[sec++];
+
+
 			for (int k = 0; k < merge_temp.length; k++)
 				System.out.print(merge_temp[k] + " ");
 	
