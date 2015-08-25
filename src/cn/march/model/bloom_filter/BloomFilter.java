@@ -39,8 +39,10 @@
 	    public static void add(String value) {
 	        
 	        if(value != null)
-	            addValue(value);
-	
+				if(contains(value))
+					throw new RuntimeException("添加的数据已存在!");
+				else
+					addValue(value);
 	    }
 	
 	    //判断一个字符串是否在BitSet中是否存在
