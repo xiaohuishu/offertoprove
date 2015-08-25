@@ -3,35 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eee3f498-78b3-4b0d-bede-6925a6dbb196" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/bin/.gitignore" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/tree/BinaryTree$BinaryNode.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/tree/BinaryTree$BinaryNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/tree/BinaryTree.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/tree/BinaryTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/model/bloom_filter/BloomFilter$SimpleHash.class" afterPath="$PROJECT_DIR$/bin/cn/march/model/bloom_filter/BloomFilter$SimpleHash.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/model/bloom_filter/BloomFilter.class" afterPath="$PROJECT_DIR$/bin/cn/march/model/bloom_filter/BloomFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/sort/BubbleSort.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/sort/BubbleSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/design/javabean/builder/BuildMulBean$Builder.class" afterPath="$PROJECT_DIR$/bin/cn/march/design/javabean/builder/BuildMulBean$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/design/javabean/builder/BuildMulBean.class" afterPath="$PROJECT_DIR$/bin/cn/march/design/javabean/builder/BuildMulBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/sort/ChooseSort.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/sort/ChooseSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/array/FindMinCountOfK.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/array/FindMinCountOfK.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/tree/FindPathOfSum.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/tree/FindPathOfSum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/array/FindTwoCountSumOfArray.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/array/FindTwoCountSumOfArray.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/tree/HasSubTree.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/tree/HasSubTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/sort/HeapSort.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/sort/HeapSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/sort/InsertSort.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/sort/InsertSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/string/InsteadOfNullString.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/string/InsteadOfNullString.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/linkedlist/LinkedList$Node.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/linkedlist/LinkedList$Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/linkedlist/LinkedList.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/linkedlist/LinkedList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/sort/MergerSort.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/sort/MergerSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/dp/O1_Package$Package.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/dp/O1_Package$Package.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/dp/O1_Package.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/dp/O1_Package.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/linkedlist/PenulKOfNodes.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/linkedlist/PenulKOfNodes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/tree/PriFroToBotOfBT.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/tree/PriFroToBotOfBT.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/sort/QuickSort.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/sort/QuickSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/linkedlist/ReverseNode.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/linkedlist/ReverseNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/string/ReverseString.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/string/ReverseString.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/string/StrRegxReplace.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/string/StrRegxReplace.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/algo/dp/maxProductSubstring.class" afterPath="$PROJECT_DIR$/bin/cn/march/algo/dp/maxProductSubstring.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BloomFilter.java" afterPath="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BloomFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/offertoprove.iml" afterPath="$PROJECT_DIR$/offertoprove.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java" afterPath="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="offertoprove.iws" />
@@ -81,8 +53,8 @@
       <file leaf-file-name="BitMap_Sort.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4215017">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,6 +128,80 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="offertoprove" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="offertoprove" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="offertoprove" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="offertoprove" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -500,12 +546,12 @@
       <workItem from="1440380827715" duration="135000" />
       <workItem from="1440383474885" duration="46000" />
       <workItem from="1440463923828" duration="158000" />
-      <workItem from="1440464739996" duration="2981000" />
+      <workItem from="1440464739996" duration="5220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3320000" />
+    <option name="totallyTimeSpent" value="5559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="743" extended-state="6" />
@@ -601,10 +647,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/AbstractSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="65" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/Hashtable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327645">
+          <caret line="129" column="13" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/TreeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327645">
+          <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/TreeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327645">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/EnumMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7542662">
+          <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/Dictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25938568">
+          <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4215017">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
