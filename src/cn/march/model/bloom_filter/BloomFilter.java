@@ -20,7 +20,7 @@
 		
 	    //初始化一个哈希类数组
 	    private static SimpleHash[] func = new SimpleHash[seeds.length];
-	
+
 	    /**
 	     * 向BitSet添加一个字符串
 	     * @param value
