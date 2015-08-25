@@ -4,7 +4,6 @@
     <list default="true" id="eee3f498-78b3-4b0d-bede-6925a6dbb196" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/bin/.gitignore" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java" afterPath="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BloomFilter.java" afterPath="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BloomFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="offertoprove.iws" />
@@ -32,7 +31,7 @@
         <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/BitSet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="448" column="46" selection-start-line="448" selection-start-column="46" selection-end-line="448" selection-end-column="46" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#3344#3345#0" expanded="true" />
                 <element signature="e#3400#3401#0" expanded="true" />
@@ -41,21 +40,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BloomFilter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BloomFilter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/march/model/bloom_filter/BloomFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9351536">
-              <caret line="91" column="30" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BitMap_Sort.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BitMap_Sort.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7133106">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -82,8 +81,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_SortTest.groovy" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java" />
         <option value="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BloomFilter.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java" />
       </list>
     </option>
   </component>
@@ -462,12 +461,12 @@
       <workItem from="1440380827715" duration="135000" />
       <workItem from="1440383474885" duration="46000" />
       <workItem from="1440463923828" duration="158000" />
-      <workItem from="1440464739996" duration="7199000" />
+      <workItem from="1440464739996" duration="8905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7538000" />
+    <option name="totallyTimeSpent" value="9244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="743" extended-state="6" />
@@ -544,17 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/BitSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="448" column="46" selection-start-line="448" selection-start-column="46" selection-end-line="448" selection-end-column="46" />
-          <folding>
-            <element signature="e#3344#3345#0" expanded="true" />
-            <element signature="e#3400#3401#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/AbstractSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -619,18 +607,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java">
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/BitSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3344#3345#0" expanded="true" />
+            <element signature="e#3400#3401#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/march/model/bloom_filter/BloomFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9351536">
-          <caret line="91" column="30" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7133106">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding />
         </state>
       </provider>
