@@ -7,7 +7,7 @@ import java.util.List;
  */
 public interface ExceptionService {
 
-    ExceptionHandlerResult handler(String policy, Throwable exception);
+    ExceptionHandlerResult handler(String policy, Throwable exception, String chain_type);
     ExceptionService registerHandler(String policy, ExceptionHandler handler);
 
 }

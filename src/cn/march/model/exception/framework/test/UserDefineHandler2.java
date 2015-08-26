@@ -14,7 +14,7 @@ public class UserDefineHandler2 implements ExceptionHandler {
 
         System.out.println("UserDefineHandler2 start process: " + chain.getException());
 
-        chain.setExceptionHandler(true);
+        //chain.setExceptionHandler(true);
 
        // chain.proceed();
 

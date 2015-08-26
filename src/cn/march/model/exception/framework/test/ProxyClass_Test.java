@@ -27,7 +27,7 @@ public class ProxyClass_Test {
 
         }catch(Throwable throwable) {
 
-            exceptionService.getExceptionService().handler("user", throwable).autoRunException();
+            exceptionService.getExceptionService().handler("user", throwable, "default").autoRunException();
         }
     }
 
