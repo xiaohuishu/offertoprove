@@ -3,13 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="eee3f498-78b3-4b0d-bede-6925a6dbb196" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/bin/.gitignore" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cn/march/model/exception/framework/test/UserDefineHandler2.class" afterPath="$PROJECT_DIR$/bin/cn/march/model/exception/framework/test/UserDefineHandler2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionHandlerChain.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionHandlerChain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionService.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandler.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerChain.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerChain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerResult.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerResult.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionService.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/InitExceptionService.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/InitExceptionService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/ProxyClass_Test.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/ProxyClass_Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean_Inter.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean_Inter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler1.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler2.java" afterPath="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="offertoprove.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,32 +35,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DefaultExceptionHandlerChain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionHandlerChain.java">
+      <file leaf-file-name="InitExceptionService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/InitExceptionService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2498#2499#0" expanded="true" />
-                <element signature="e#2576#2577#0" expanded="true" />
-                <element signature="e#2742#2743#0" expanded="true" />
-                <element signature="e#2816#2817#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultExceptionService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionService.java">
+      <file leaf-file-name="ExceptionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1137#1138#0" expanded="true" />
-                <element signature="e#1168#1169#0" expanded="true" />
-              </folding>
+              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExceptionHandlerChain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerChain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExceptionHandlerResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="87" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,14 +111,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProxyClass_Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProxyClass_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/ProxyClass_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="85" selection-start-line="29" selection-start-column="85" selection-end-line="29" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.94255877">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestExceptionBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestExceptionBean_Inter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean_Inter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,17 +167,17 @@
         <option value="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_SortTest.groovy" />
         <option value="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BloomFilter.java" />
         <option value="$PROJECT_DIR$/src/cn/march/model/bloom_filter/BitMap_Sort.java" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerResult.java" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerChain.java" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean_Inter.java" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean.java" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/InitExceptionService.java" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler2.java" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler1.java" />
         <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionHandlerChain.java" />
-        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionService.java" />
         <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionService.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerChain.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerResult.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionService.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/InitExceptionService.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean_Inter.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler1.java" />
+        <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler2.java" />
         <option value="$PROJECT_DIR$/src/cn/march/model/exception/framework/test/ProxyClass_Test.java" />
       </list>
     </option>
@@ -672,12 +707,12 @@
       <workItem from="1440463923828" duration="158000" />
       <workItem from="1440464739996" duration="10316000" />
       <workItem from="1440484229026" duration="1655000" />
-      <workItem from="1440568559289" duration="9937000" />
+      <workItem from="1440568559289" duration="11943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22247000" />
+    <option name="totallyTimeSpent" value="24253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="743" extended-state="7" />
@@ -880,14 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/lang/reflect/Proxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -896,38 +923,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean_Inter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/InitExceptionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_45/src.zip!/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4464752">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -948,32 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerChain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3566553">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionHandlerChain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -988,42 +961,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler2.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1168#1169#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionHandlerResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/ExceptionService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="87" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/ProxyClass_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/InitExceptionService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="85" selection-start-line="29" selection-start-column="85" selection-end-line="29" selection-end-column="85" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/default_impl/DefaultExceptionService.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/TestExceptionBean_Inter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1137#1138#0" expanded="true" />
-            <element signature="e#1168#1169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/UserDefineHandler2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/march/model/exception/framework/test/ProxyClass_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94255877">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
