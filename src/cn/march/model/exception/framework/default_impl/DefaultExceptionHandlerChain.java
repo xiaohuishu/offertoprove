@@ -68,7 +68,7 @@ public class DefaultExceptionHandlerChain implements ExceptionHandlerChain {
     }
 
     private boolean canProceed() {
-        return this.currentHandlerIndex < handlers.size() - 1;
+        return this.currentHandlerIndex <= handlers.size() - 1;
     }
 
     private ExceptionHandler getCurrentExceptionHandler() {

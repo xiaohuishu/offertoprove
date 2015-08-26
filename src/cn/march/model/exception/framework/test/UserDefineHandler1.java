@@ -16,7 +16,7 @@ public class UserDefineHandler1 implements ExceptionHandler {
 
         chain.setExceptionHandler(true);
 
-        chain.proceed();
+       // chain.proceed();
 
 
     }
