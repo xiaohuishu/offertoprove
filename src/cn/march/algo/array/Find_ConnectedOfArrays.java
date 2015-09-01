@@ -1,9 +1,22 @@
+
+
 package cn.march.algo.array;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by antsmarth on 15-8-31.
  */
 public class Find_ConnectedOfArrays {
+
+
+    public static void main(String[] args) {
+
+        int[][] arrays = new int[][]{ {1,2,3,4} , {3,2,2,6} , {1,3,2,7}};
+        find_ConnectedOfArrays(arrays, 4, 1, 1);
+
+    }
 
 
 
@@ -26,8 +39,13 @@ public class Find_ConnectedOfArrays {
 
             boolean [] booleans = new boolean[]{true, true, true, true};
 
+            Map<Integer, Integer> maps = new HashMap<Integer, Integer>(n*n);
 
-            find_ElementsOfArrays(arrays,n, x, y, value, booleans);
+            System.out.println("初始坐标: (" + x + ", " + y + ")");
+
+            maps.put(x, x+y);
+
+            find_ElementsOfArrays(arrays, n, x, y, value, booleans, maps);
 
         }
 
@@ -35,36 +53,35 @@ public class Find_ConnectedOfArrays {
 
     }
 
+    private static void find_ElementsOfArrays(int[][] arrays,int n, int x, int y,int value, boolean[] booleans, Map<Integer,Integer> maps) {
 
-
-    private static void find_ElementsOfArrays(int[][] arrays,int n, int x, int y,int value, boolean[] booleans) {
             if(x-1 > 0)
-                if (arrays[x - 1][y] == value && booleans[0]) {
+                if (arrays[x - 1][y] == value && booleans[0] && !maps.containsValue((x-1)+y)) {
                     System.out.println("(" + (x - 1) + ", " + y + ")");
-                    find_ElementsOfArrays(arrays,n, x-1, y, value, booleans);
+                    find_ElementsOfArrays(arrays,n, x-1, y, value, booleans, maps);
                 }
                 else
                     booleans[0] = false;
 
             if(x+1 < n)
-                if(arrays[x + 1][y] == value && booleans[1]) {
+                if(arrays[x + 1][y] == value && booleans[1] && !maps.containsValue((x+1)+y)) {
                     System.out.println("(" + (x + 1) + ", " + y + ")");
-                    find_ElementsOfArrays(arrays,n, x+1, y,value, booleans);
+                    find_ElementsOfArrays(arrays,n, x+1, y,value, booleans, maps);
                 }
                 else
                     booleans[1] = false;
 
             if(y-1 > 0)
-                if(arrays[x][y-1] == value && booleans[2]) {
+                if(arrays[x][y-1] == value && booleans[2] && !maps.containsValue(x+(y-1))) {
                     System.out.println("(" + x + ", " + (y - 1) + ")");
-                    find_ElementsOfArrays(arrays,n, x, y-1, value, booleans);
+                    find_ElementsOfArrays(arrays,n, x, y-1, value, booleans, maps);
                 }
                 else
                     booleans[2] = false;
             if(y+1 < n)
-                if(arrays[x][y+1] == value && booleans[3]) {
+                if(arrays[x][y+1] == value && booleans[3] && !maps.containsValue(x+(y+1))) {
                     System.out.println("(" + x + ", " + (y + 1) + ")");
-                    find_ElementsOfArrays(arrays,n, x, y+1,value, booleans);
+                    find_ElementsOfArrays(arrays,n, x, y+1,value, booleans, maps);
                 }
                 else
                     booleans[3] = false;
